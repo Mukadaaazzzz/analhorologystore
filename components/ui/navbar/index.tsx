@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <>
-      {!open && <PromoSection />}
+      
       <div
         className={cn(
           "sticky top-0 z-[100]",
@@ -50,31 +50,27 @@ const Navbar: React.FC<NavbarProps> = () => {
         )}
       >
         <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-4 lg:justify-normal">
-          <div className="flex items-center gap-1 lg:basis-1/4">
-            <button className="lg:hidden" onClick={() => setOpen(true)}>
-              <HamburgerMenu className="w-6" />
-            </button>
+  {/* Logo on the left */}
+  <div className="flex items-center gap-1 lg:basis-1/4">
+    <Logo />
+  </div>
 
-            <Logo />
-          </div>
+  {/* Mobile menu button on the right */}
+  <div className="flex lg:hidden">
+    <button onClick={() => setOpen(true)}>
+      <HamburgerMenu className="w-6" />
+    </button>
+  </div>
 
-          <div className="hidden basis-2/4 lg:block">
-            <NavLinks />
-          </div>
+  {/* Desktop links */}
+  <div className="hidden lg:flex flex-1 justify-end">
+    <NavLinks />
+  </div>
 
-          <div className="flex items-center gap-1 lg:basis-1/4 lg:justify-end lg:gap-4">
-            <SearchIcon className="hidden lg:block" />
-            <UserIcon className="hidden lg:block" />
-            <CartIcon className="w-6" />
-            <NotificationCount
-              count={2}
-              className={cn(isRootPage ? "text-[#FFAB00]" : "text-white")}
-            />
-          </div>
+  {/* Mobile navbar overlay */}
+  <NavMobile open={open} onClick={() => setOpen(false)} />
+</nav>
 
-          {/* mobile navbar  */}
-          <NavMobile open={open} onClick={() => setOpen(false)} />
-        </nav>
       </div>
     </>
   );
