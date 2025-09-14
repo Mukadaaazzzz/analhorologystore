@@ -277,9 +277,7 @@ export default function About() {
                 </a>
               </div>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <Link href="/about" className="group inline-flex items-center">
-                  <span className="border-b border-[#ffc95c] text-[#ffc95c] group-hover:opacity-80">More about Analhorology</span>
-                </Link>
+                
                 <Link href="/shop"><Button className="bg-[#ffc95c] text-black hover:bg-[#ffd985]">Shop now</Button></Link>
               </div>
             </div>
