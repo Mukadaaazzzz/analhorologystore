@@ -463,6 +463,36 @@ export const FacebookIcon: React.FC<SVGComponentProps> = ({
   );
 };
 
+export const LinkedInIcon: React.FC<SVGComponentProps> = ({
+  fill,
+  stroke,
+  className,
+}) => {
+  return (
+    <svg
+      className={cn(className)}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.5 8.5C7.32843 8.5 8 7.82843 8 7C8 6.17157 7.32843 5.5 6.5 5.5C5.67157 5.5 5 6.17157 5 7C5 7.82843 5.67157 8.5 6.5 8.5Z"
+        fill={cn(fill ? fill : "#141718")}
+      />
+      <path
+        d="M5 10.5H8V18.5H5V10.5Z"
+        fill={cn(fill ? fill : "#141718")}
+      />
+      <path
+        d="M10.5 10.5H13.4V11.8H13.45C13.8 11.12 14.7 10.38 16.2 10.38C18.95 10.38 19.5 12.02 19.5 14.6V18.5H16.6V15.2C16.6 13.9 16.57 12.3 14.9 12.3C13.2 12.3 12.95 13.66 12.95 15.08V18.5H10.5V10.5Z"
+        fill={cn(fill ? fill : "#141718")}
+      />
+    </svg>
+  );
+};
+
 export const YoutubeIcon: React.FC<SVGComponentProps> = ({
   stroke,
   className,

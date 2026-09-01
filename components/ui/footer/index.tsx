@@ -8,7 +8,8 @@ import SectionLayout from "@/layouts/sectionLayout";
 
 // ui
 import Text from "@/ui/text";
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from "@/ui/assets/svg";
+import Logo from "@/ui/assets/logo";
+import { FacebookIcon, LinkedInIcon, YoutubeIcon } from "@/ui/assets/svg";
 
 // hooks
 import { useRootContext } from "@/hooks/rootContext";
@@ -34,11 +35,8 @@ const Footer = () => {
         <div className="mx-auto flex max-w-[1440px] flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           {/* Brand + tagline */}
           <div className="flex flex-col items-center gap-3 lg:flex-row lg:gap-6">
-            <h3 className={cn("font-poppins text-2xl font-medium", primaryText)}>
-              Analhorology<span className={cn("ml-0.5", secondaryText)}>.</span>
-            </h3>
+            <Logo className="flex items-center justify-center" />
             <span className={cn("h-[1px] w-8 rounded-full lg:hidden", secondaryText)} />
-            
           </div>
 
           {/* Nav links */}
@@ -66,10 +64,37 @@ const Footer = () => {
             <Text family="poppins" size="xs" className={cn("text-center lg:text-left", secondaryText)}>
               © {new Date().getFullYear()} Analhorology. All rights reserved.
             </Text>
-            
           </div>
 
-          
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/company/analhorology"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white p-2 transition-opacity hover:opacity-80"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white p-2 transition-opacity hover:opacity-80"
+            >
+              <FacebookIcon className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+              className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white p-2 transition-opacity hover:opacity-80"
+            >
+              <YoutubeIcon className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </footer>
     </SectionLayout>

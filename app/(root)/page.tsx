@@ -22,7 +22,7 @@ const VISIT_MSG = encodeURIComponent(
   "hello, I would love to visit the Analhorology store in Lagos."
 );
 const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${VISIT_MSG}`;
-
+const linkedinCompanyUrl = "https://www.linkedin.com/company/analhorology";
 
 export default function Home() {
   return (
@@ -341,10 +341,10 @@ export default function Home() {
             <DeliveryIcon className="h-12 w-12" />
             <div className="space-y-1 md:space-y-2">
               <Text size="sm" weight={600} family="poppins" color="black/800" className="lg:text-xl">
-                Free Shipping
+                In-store pickup
               </Text>
               <Text size="sm" color="gray">
-                Orders above threshold
+                Visit our Lagos showroom
               </Text>
             </div>
           </div>
@@ -352,10 +352,10 @@ export default function Home() {
             <MoneyIcon className="h-12 w-12" />
             <div className="space-y-1 md:space-y-2">
               <Text size="sm" weight={600} family="poppins" color="black/800" className="lg:text-xl">
-                Money‑back
+                Curated sourcing
               </Text>
               <Text size="sm" color="gray">
-                30‑day guarantee
+                Watches selected with care
               </Text>
             </div>
           </div>
@@ -363,10 +363,10 @@ export default function Home() {
             <LockIcon className="h-12 w-12" />
             <div className="space-y-1 md:space-y-2">
               <Text size="sm" weight={600} family="poppins" color="black/800" className="lg:text-xl">
-                Secure Payments
+                Authenticity check
               </Text>
               <Text size="sm" color="gray">
-                Secured by Stripe/Paystack
+                Verified before sale
               </Text>
             </div>
           </div>
@@ -374,10 +374,10 @@ export default function Home() {
             <CallIcon className="h-12 w-12" />
             <div className="space-y-1 md:space-y-2">
               <Text size="sm" weight={600} family="poppins" color="black/800" className="lg:text-xl">
-                24/7 Support
+                Concierge support
               </Text>
               <Text size="sm" color="gray">
-                Phone & email
+                Guidance on fit & care
               </Text>
             </div>
           </div>
@@ -392,14 +392,19 @@ export default function Home() {
               newsfeed
             </Text>
             <Heading as="h2" intent="base-section">
-              Instagram
+              LinkedIn
             </Heading>
             <Text size="sm">
-              Follow us for drops, care tips & behind‑the‑scenes.
+              Follow our company updates, product highlights & behind‑the‑scenes stories.
             </Text>
-            <Text size="xl" weight={500} family="poppins" className="text-[#ffc95c]">
-              @analhorology
-            </Text>
+            <a
+              href={linkedinCompanyUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block text-xl font-medium font-poppins text-[#ffc95c] transition-opacity hover:opacity-80"
+            >
+              linkedin.com/company/analhorology
+            </a>
           </div>
         </div>
       </SectionLayout>
